@@ -22,6 +22,10 @@ public class MarksController {
 	@Autowired
 	private MarksRepository marksRepository;
 	
+	/**
+	 * Returns marks of all subjects
+	 * @return
+	 */
 	@GetMapping()
 	public List<Marks> getMarks() {
 		return (List<Marks>)marksRepository.findAll();
