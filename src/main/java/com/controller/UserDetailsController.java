@@ -26,6 +26,11 @@ public class UserDetailsController {
 		return (List<Details>)userDetailsRepository.findAll();
 	}
 	
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
 	@GetMapping("/{id}")
 	public Optional<Details> getUserDetails(@PathVariable int id ) {
 		return userDetailsRepository.findById(id);

@@ -29,7 +29,11 @@ public class UserController {
 	public List<User> getUsers() {
 		return (List<User>)userRepository.findAll();
 	}
-	
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
 	@GetMapping("/{id}")
 	public Optional<User> getUser(@PathVariable int id ) {
 		return userRepository.findById(id);
